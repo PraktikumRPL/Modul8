@@ -1,8 +1,10 @@
 package fibbonaci;
 import java.util.Scanner;
-public class Fibbonaci1 {
+public class Fibbonaci3 {
     public static void main(String[] args) {
-        int a=0, b=1, hasil = 0;
+        int a=0, b=1;
+        int[] hasil ;
+        hasil = new int[100];
         Scanner input = new Scanner(System.in);
         System.out.print("Input : ");
         int fib = input.nextInt();
@@ -10,10 +12,11 @@ public class Fibbonaci1 {
         for (int i=1; i<= fib; i++){
             a+=b;
             b=a-b;
-            hasil+=a;
+            hasil[i]=a;
         }
-        System.out.print(hasil);
-        System.out.println();
+        for (int i = fib; i >=1 ; i--){
+            System.out.print(hasil[i]+" ");
+        }
     }
 }
 
